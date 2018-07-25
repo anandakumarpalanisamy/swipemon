@@ -1,0 +1,13 @@
+<div class="emp-stats-container" *ngIf="employee">
+  <mat-card>
+    <mat-card-title>
+      {{ employee.firstName }} {{employee.lastName }}
+    </mat-card-title>
+    <mat-card-content>
+      <app-emp-stats-chart [employee]="employee"></app-emp-stats-chart>
+    </mat-card-content>
+    <mat-card-footer>
+      <button mat-raised-button color="accent" (click)="goToHome($event)">Back</button>
+    </mat-card-footer>
+  </mat-card>
+</div>

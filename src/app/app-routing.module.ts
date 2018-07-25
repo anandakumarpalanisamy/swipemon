@@ -1,11 +1,16 @@
 import { HomeComponent } from './components/home/home.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { EmployeeStatsComponent } from './components/employee-stats/employee-stats.component';
 
 const routes: Routes = [
     {
         path: '',
         component: HomeComponent
+    },
+    {
+      path: 'employees/:id',
+      component: EmployeeStatsComponent
     }
 ];
 

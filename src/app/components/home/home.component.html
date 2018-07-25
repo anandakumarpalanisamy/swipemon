@@ -1,5 +1,22 @@
 <div class="container">
-  <h1 class="title">
-    {{ 'PAGES.HOME.TITLE' | translate }}
-  </h1>
+  <header>
+    <strong><span>Swipe</span>Mon</strong>
+    <nav>
+      <ul>
+        <li><img src="./assets/btn-min.svg" id="min" (click)="minimizeWindow()"></li>
+        <li><img src="./assets/btn-close.svg" (click)="closeWindow()"></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="drop-zone-container" *ngIf="!employees">
+    <file-drop class="file-drop-div" headertext="Drop your file here"
+      (onFileDrop)="fileDropped($event)"
+      (onFileOver)="fileOver($event)" (onFileLeave)="fileLeave($event)"></file-drop>
+  </div>
+  <app-employee-preview-list *ngIf="employees && employees.length > 0"
+    [odcName]="odcName"
+    [month]="month"
+    [year]="year"
+    [employees]="employees">
+  </app-employee-preview-list>
 </div>

@@ -1,7 +1,42 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
 html, body {
   margin: 0;
   padding: 0;
 
   height: 100%;
+}
+
+body {
+  background-color: #EBEBEB;
+  font-family: 'Montserrat';
+}
+
+.drop-zone {
+  margin: 40px auto !important;
+  width: 80% !important;
+  height: 80vh !important;
+  border: 2px solid #e1e1e1 !important;
+  border-radius: 2px !important;
+}
+
+.drop-zone .content {
+  height: 100% !important;
+}
+
+path {
+  stroke: steelblue;
+  stroke-width: 2;
+  fill: none;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: grey;
+  stroke-width: 1;
+  shape-rendering: crispEdges;
 }

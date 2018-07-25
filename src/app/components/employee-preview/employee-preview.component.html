@@ -1,0 +1,18 @@
+<a [routerLink]="['/employees', employee.id]">
+  <mat-card>
+    <mat-card-title-group>
+      <mat-card-title color="primary">{{ employee.firstName | bcEllipsis: 16 }}</mat-card-title>
+      <mat-card-subtitle>{{ employee.lastName }}</mat-card-subtitle>
+    </mat-card-title-group>
+    <mat-card-content>
+    </mat-card-content>
+    <mat-card-footer>
+        <div>{{ employee.id }}</div>
+        <p>
+            <button mat-raised-button color="primary">
+              Productive Hours: {{ employee.totalMonthHours }}
+            </button>
+          </p>
+    </mat-card-footer>
+  </mat-card>
+</a>

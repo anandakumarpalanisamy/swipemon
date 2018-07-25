@@ -1,0 +1,6 @@
+<div>
+  <h1 class="report-title">{{ odcName }} Attendance Report for {{ month }} - {{ year }} </h1>
+</div>
+<div class="list-container">
+    <app-employee-preview *ngFor="let employee of employees" [employee]="employee"></app-employee-preview>
+</div>
